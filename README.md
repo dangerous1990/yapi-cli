@@ -1,13 +1,13 @@
 
 
-# what's this?
-基于https://github.com/YMFE/yapi的开放接口开发的上传swagger.json接口文件到yapi接口平台的客户端工具。
+# 1. what's this?
+基于[yapi](https://github.com/YMFE/yapi)的开放接口开发的上传swagger.json接口文件到yapi接口平台的客户端工具。
 
-# why? 
-1. https://github.com/YMFE/yapi原生的cli需要安装node环境
+# 2. why? 
+1. 原生的cli是基于node环境，需要安装node环境
 2. 原生的cli不支持传多个swagger.json的文件
 
-# how to use?
+# 3. how to use?
 1. install 
 ```
 go get -u https://github.com/dangerous1990/yapi-cli
