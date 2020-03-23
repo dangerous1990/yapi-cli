@@ -12,6 +12,7 @@ import (
 
 var (
 	path = flag.String("path", "", "yapi-import.json所在文件夹")
+	token = flag.String("token", "", "yapi项目token")
 )
 
 type config struct {
@@ -59,11 +60,15 @@ func post(config config, fileName string) {
 		fmt.Printf("read file[%s] failed err=%v", filePath, err)
 		return
 	}
+	actualToken := config.Token
+	if config.Token == "" {
+		actualToken = *token
+	}
 	values := url.Values{
 		"type":  {config.Type},
 		"json":  {string(bytes)},
 		"merge": {config.Merge},
-		"token": {config.Token},
+		"token": {actualToken},
 	}
 	client := &http.Client{}
 	uri := config.Server + "/api/open/import_data"
