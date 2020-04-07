@@ -10,7 +10,7 @@
 # 3. how to use?
 1. install 
 ```
-go get -u https://github.com/dangerous1990/yapi-cli
+go get -u github.com/dangerous1990/yapi-cli
 
 ```
 2. 编写yapi-import.json
