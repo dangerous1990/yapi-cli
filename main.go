@@ -12,7 +12,7 @@ import (
 
 var (
 	path = flag.String("path", "", "yapi-import.json所在文件夹")
-	token = flag.String("token", "", "yapi项目token")
+	token = flag.String("token", "", "global token,yapi-import.json 没有配置token默认使用全局token")
 )
 
 type config struct {
